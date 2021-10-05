@@ -7,10 +7,10 @@ let initState = {
   darkMode: false,
 }
 
-let reducer = (state, a) =>
-  switch a {
-  | SetDarkMode(dm) => {...state, darkMode: dm}
-  | SetAuthorized(a) => {...state, authorized: a}
+let reducer = (state, action) =>
+  switch action {
+  | SetDarkMode(darkMode) => {...state, darkMode: darkMode}
+  | SetAuthorized(authorized) => {...state, authorized: authorized}
   }
 
 let context = React.createContext((initState, (_: action) => ()))

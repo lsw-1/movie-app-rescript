@@ -7,15 +7,15 @@ var initState = {
   darkMode: false
 };
 
-function reducer(state, a) {
-  if (a.TAG === /* SetDarkMode */0) {
+function reducer(state, action) {
+  if (action.TAG === /* SetDarkMode */0) {
     return {
             authorized: state.authorized,
-            darkMode: a._0
+            darkMode: action._0
           };
   } else {
     return {
-            authorized: a._0,
+            authorized: action._0,
             darkMode: state.darkMode
           };
   }

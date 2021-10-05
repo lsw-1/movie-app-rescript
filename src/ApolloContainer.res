@@ -17,6 +17,7 @@ let instance = ApolloClient.make(
   (),
 )
 
+@react.component
 let make = (~children) => {
   <ApolloClient.React.ApolloProvider client=instance>
     {children}

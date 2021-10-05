@@ -19,12 +19,15 @@ var httpLink = ApolloClient__Link_Http_HttpLink.make((function (param) {
 
 var instance = ApolloClient.make(undefined, undefined, undefined, Caml_option.some(httpLink), ApolloClient__Cache_InMemory_InMemoryCache.make(undefined, undefined, undefined, undefined, undefined, undefined), undefined, undefined, true, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined);
 
-function make(children) {
+function ApolloContainer(Props) {
+  var children = Props.children;
   return React.createElement(Client.ApolloProvider, {
               client: instance,
               children: children
             });
 }
+
+var make = ApolloContainer;
 
 export {
   graphqlEndpoint ,

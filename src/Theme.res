@@ -22,7 +22,9 @@ let colors = {
 
 let baseMargin = 4.
 
-let fontBase = 4
+let spacingMultiplier = multiplier => (4. *. multiplier)->Style.dp
+
+let fontBase = 4.
 
 let styles = {
   open Style
@@ -34,9 +36,16 @@ let styles = {
       ~paddingHorizontal=(baseMargin *. 4.)->dp,
       (),
     ),
+    "defaultBox": style(~flex=1., ()),
+    "defaultBoxWithSpacing": style(
+      ~flex=1.,
+      ~backgroundColor=colors.bg,
+      ~paddingHorizontal=(baseMargin *. 4.)->dp,
+      (),
+    ),
     "center": style(~alignItems=#center, ~justifyContent=#center, ()),
     "title": style(~fontSize=48., ~color=colors.title, ~fontWeight=#_800, ()),
-    "subtitle": style(~fontSize=24., ~color=colors.title, ~fontWeight=#_500, ()),
+    "subtitle": style(~fontSize=fontBase *. 6., ~color=colors.title, ~fontWeight=#_500, ()),
     "body": style(~fontSize=14., ~color=colors.title, ~fontWeight=#_500, ()),
     "buttonTxt": style(~fontSize=18., ~color=colors.title, ~fontWeight=#_700, ()),
   })

@@ -2,11 +2,23 @@
 
 import * as ReactNative from "react-native";
 
+function spacingMultiplier(multiplier) {
+  return 4 * multiplier;
+}
+
 var styles = ReactNative.StyleSheet.create({
       flex: {
         flex: 1
       },
       container: {
+        backgroundColor: "#1A1D2B",
+        flex: 1,
+        paddingHorizontal: 4 * 4
+      },
+      defaultBox: {
+        flex: 1
+      },
+      defaultBoxWithSpacing: {
         backgroundColor: "#1A1D2B",
         flex: 1,
         paddingHorizontal: 4 * 4
@@ -22,7 +34,7 @@ var styles = ReactNative.StyleSheet.create({
       },
       subtitle: {
         color: "#FFFFFF",
-        fontSize: 24,
+        fontSize: 4 * 6,
         fontWeight: "500"
       },
       body: {
@@ -54,6 +66,7 @@ var fontBase = 4;
 export {
   colors ,
   baseMargin ,
+  spacingMultiplier ,
   fontBase ,
   styles ,
   

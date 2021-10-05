@@ -8,9 +8,9 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint .",
-    "res:clean": "bsb -clean-world",
-    "res:watch": "bsb -clean-world -make-world -w",
-    "res:build": "bsb -clean-world -make-world"
+    "res:c": "bsb -clean-world",
+    "res:w": "bsb -clean-world -make-world -w",
+    "res:b": "bsb -clean-world -make-world"
   },
   "dependencies": {
     "@apollo/client": "^3.3.19",
